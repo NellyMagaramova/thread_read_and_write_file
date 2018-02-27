@@ -8,7 +8,7 @@ std::queue<std::string>buf2;
 void write(){
 	//ofstream result("C:\\Users\\nmaga\\Desktop\\auriga\\readFile\\file1.txt");
 	ofstream result("file1.txt");
-	while (!buf.empty())
+	while (!buf2.empty())
 	{
 		
 		std::string dataToFile;
@@ -31,7 +31,7 @@ void write(){
 
 	buf2.pop();
 	
-		lkc.unlock(); //освобождает мьютекс
+		lkc.unlock(); //Г®Г±ГўГ®ГЎГ®Г¦Г¤Г ГҐГІ Г¬ГјГѕГІГҐГЄГ±
 	//	if (buf2.empty()) { break; }
 		
 	
@@ -64,7 +64,7 @@ void rever() {
 
 		buf2.push(data);
 		data.erase();
-		lk.unlock(); //освобождает мьютекс
+		lk.unlock(); //Г®Г±ГўГ®ГЎГ®Г¦Г¤Г ГҐГІ Г¬ГјГѕГІГҐГЄГ±
 		
 		data_cond.notify_one();
 	}
@@ -73,7 +73,7 @@ void rever() {
 }
 
 void readFile() {
-	std::ifstream stream("C:\\Users\\nmaga\\Desktop\\auriga\\readFile\\ответы.txt");
+	std::ifstream stream("C:\\Users\\nmaga\\Desktop\\auriga\\readFile\\Г®ГІГўГҐГІГ».txt");
 	char ff = '\0';
 	string file_buffer;
 
